@@ -28,9 +28,33 @@ data = json.load(movies)
 
 #file 4
 
-useryear = int(input("What year of movies do u want: "))
+# useryear = int(input("What year of movies do u want: "))
 
-for movie in data:
-    if movie["year"] == useryear:
-        print(movie["title"])
+# for movie in data:
+#     if movie["year"] == useryear:
+#         print(movie["title"
 
+#file 5
+# def movie_finder():
+
+#     usermovie = input("WHAT MOVIE U WANT: ")
+#     for movie in data:
+#         if movie["title"] == usermovie:
+#             print("Movie found!")
+#             print(usermovie)
+
+#file 6 
+def movie_genre():
+    usergenrelist = []
+    while True: 
+        usergenre = input("What genre you want?: ")
+        if usergenre == "N":
+            print(f" You search for movies with the genre {usergenrelist}")
+            for movie in data:
+                if usergenrelist == movie["genres"]:
+                    print(movie["title"])
+        else:
+            usergenrelist.append(usergenre)
+
+           
+movie_genre()
