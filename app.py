@@ -44,17 +44,38 @@ data = json.load(movies)
 #             print(usermovie)
 
 #file 6 
-def movie_genre():
-    usergenrelist = []
-    while True: 
-        usergenre = input("What genre you want?: ")
-        if usergenre == "N":
-            print(f" You search for movies with the genre {usergenrelist}")
-            for movie in data:
-                if usergenrelist == movie["genres"]:
-                    print(movie["title"])
-        else:
-            usergenrelist.append(usergenre)
+# def movie_genre():
+#     usergenrelist = []
+#     while True: 
+#         usergenre = input("What genre you want?: ")
+#         if usergenre == "N":
+#             print(f" You search for movies with the genre {usergenrelist}")
+#             for movie in data:
+#                 if usergenrelist == movie["genres"]:
+#                     print(movie["title"])
+#         else:
+#             usergenrelist.append(usergenre)
 
            
-movie_genre()
+# movie_genre()
+
+#for fun
+
+# def randommovierec():
+#     whatgenre = []
+#     userstart = input("DO you want a random movie? (Y/N): ").upper()
+#     if userstart == "Y":
+#         while True:
+#                 usergenre = input(f"Add Genre (N to stop):  ")
+#                 whatgenre.append(usergenre)
+#                 print(f"added {usergenre}! ")
+
+
+
+def englishorfrench():
+    usersentence = input("input french or enlgish sentence: ")
+
+
+
+ 
+englishorfrench()
