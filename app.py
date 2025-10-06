@@ -57,25 +57,41 @@ data = json.load(movies)
 #             usergenrelist.append(usergenre)
 
            
-# movie_genre()
-
-#for fun
-
-# def randommovierec():
-#     whatgenre = []
-#     userstart = input("DO you want a random movie? (Y/N): ").upper()
-#     if userstart == "Y":
-#         while True:
-#                 usergenre = input(f"Add Genre (N to stop):  ")
-#                 whatgenre.append(usergenre)
-#                 print(f"added {usergenre}! ")
-
 
 
 def englishorfrench():
+    S = 0
+    T = 0
     usersentence = input("input french or enlgish sentence: ")
-
+    for word in usersentence:
+        if word == "S" or word == "s":
+            S += 1
+        elif word == "T" or word =="t":
+            T +=1
+    if S > T:
+        print("french")
+    elif S < T:
+        print("enlgish")
+    elif S == T:
+        print("French")
+    
 
 
  
-englishorfrench()
+def occupiedspaces():
+    samespace = 0
+    spaces = int(input("How much total spaces? : "))
+    spacestoday = input("C = taken, . = free Today: ").upper()
+    spacesyeserday = input("C = taken, . = free Yesterday: ").upper()
+    for space in spacestoday:
+        if space 
+        
+       
+    print(samespace)
+        
+       
+        
+
+
+
+occupiedspaces()
