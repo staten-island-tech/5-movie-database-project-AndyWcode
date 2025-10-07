@@ -56,8 +56,6 @@ data = json.load(movies)
 #         else:
 #             usergenrelist.append(usergenre)
 
-           
-
 
 def englishorfrench():
     S = 0
@@ -75,23 +73,25 @@ def englishorfrench():
     elif S == T:
         print("French")
     
-
-
- 
-def occupiedspaces():
-    samespace = 0
-    spaces = int(input("How much total spaces? : "))
-    spacestoday = input("C = taken, . = free Today: ").upper()
-    spacesyeserday = input("C = taken, . = free Yesterday: ").upper()
-    for space in spacestoday:
-        if space 
         
-       
+def occupiedspaces(t, y):
+    samespace = 0 
+    spaces = len(t)
+    for space in range(spaces):
+        if t[space]== y[space] and t[space] != ".":
+            samespace += 1
     print(samespace)
         
-       
-        
 
 
 
-occupiedspaces()
+def test(t, y):
+    for char in range(len(t)):
+        if t[char] == y[char]:
+            print("hi")
+
+list = [0,2,3,5,6,1,7,8,9,4]
+
+for i in list:
+    if list[i] > list[i]:
+        print("gr")
