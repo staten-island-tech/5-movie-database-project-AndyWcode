@@ -90,8 +90,14 @@ def test(t, y):
         if t[char] == y[char]:
             print("hi")
 
-list = [0,2,3,5,6,1,7,8,9,4]
+list = [1, 3, 2 ,5, 4 , 9 ,7, 8, 6, 0 ]
 
-for i in list:
-    if list[i] > list[i]:
-        print("gr")
+
+def inorder(list):
+    ordered = []
+    for number in list:
+            if list[0:number:1]> list[0:number:2]:
+                ordered.append(number)
+    print(ordered)
+
+inorder(list)
