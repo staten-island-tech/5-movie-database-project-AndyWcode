@@ -85,19 +85,3 @@ def occupiedspaces(t, y):
 
 
 
-def test(t, y):
-    for char in range(len(t)):
-        if t[char] == y[char]:
-            print("hi")
-
-list = [1, 3, 2 ,5, 4 , 9 ,7, 8, 6, 0 ]
-
-
-def inorder(list):
-    ordered = []
-    for number in list:
-            if list[0:number:1]> list[0:number:2]:
-                ordered.append(number)
-    print(ordered)
-
-inorder(list)
