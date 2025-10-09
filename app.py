@@ -82,6 +82,56 @@ def occupiedspaces(t, y):
             samespace += 1
     print(samespace)
         
+# def magnus(x):
+#     h = 0
+#     o = 0
+#     n = 0
+#     i = 0
+#     blocks = 0 
+#     for letter in x.upper():
+#         if letter == "H" and h == o:
+#             h += 1
+#         elif letter == "O" and h>o:
+#             o +=1
+#         elif letter == "N" and o>n:
+#             n +=1 
+#         elif letter == "I" and n>i:
+#             i += 1 
+#             blocks +=1
+#     print(blocks)
 
+# list = [30, 40,30,20, 25]
+# def gradecalc(x):
+#     average = 0
+#     for number in list:
+#         average += number
 
+#     average =float(average/(len(list)))
+#     if average > 65:
+#         print("pass")
+#         print(average)
+#     else:
+#         print("FAIL!!")
+#         print(average)
 
+# gradecalc(list)
+
+        
+students = [{
+    "name": "Andy",
+    "Grade": 50
+},
+{   "name":"Jesse",
+    "Grade":90
+
+}]
+def reportcard(x):
+    for student in x:
+        print(student["name"])
+        print(student["Grade"])
+        if student["Grade"] >=60:
+            print("Pass")
+        else:
+            print("Fail")
+
+reportcard(students)
