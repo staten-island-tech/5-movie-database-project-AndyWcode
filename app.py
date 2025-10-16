@@ -116,3 +116,17 @@ def occupiedspaces(t, y):
 
 # gradecalc(list)
 
+class student:
+    def info(self, name, year, osis):
+        self.name = name
+        self.year = year
+        self.osis = osis
+    def classes(self):
+        if self.year == "Freshman":
+            return self.year
+        else:
+            print("Too old dude")
+    
+
+Jesse = student.info("Jesse","Jesse", "Freshman",2747253978325)
+Jesse.classes
