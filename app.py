@@ -116,22 +116,3 @@ def occupiedspaces(t, y):
 
 # gradecalc(list)
 
-        
-students = [{
-    "name": "Andy",
-    "Grade": 50
-},
-{   "name":"Jesse",
-    "Grade":90
-
-}]
-def reportcard(x):
-    for student in x:
-        print(student["name"])
-        print(student["Grade"])
-        if student["Grade"] >=60:
-            print("Pass")
-        else:
-            print("Fail")
-
-reportcard(students)
