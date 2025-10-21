@@ -117,16 +117,84 @@ def occupiedspaces(t, y):
 # gradecalc(list)
 
 class student:
-    def info(self, name, year, osis):
-        self.name = name
+    def __init__(self, p, year, osis):
+        self.p = p
         self.year = year
         self.osis = osis
     def classes(self):
         if self.year == "Freshman":
-            return self.year
+            return "You are freshman"
+            
         else:
-            print("Too old dude")
-    
+            return "Unc"
 
-Jesse = student.info("Jesse","Jesse", "Freshman",2747253978325)
-Jesse.classes
+class pet:
+    def __init__(self, age, name,):
+        self.age = age
+        self.name = name
+        self.hunger = 50
+        self.thrist = 50
+        self.happiness = 20
+        self.hygiene = 30
+        
+    def feed(self):
+        if self.age >= 5:
+            if self.hunger >= 95:
+                print(f"{self.name} is full!!")
+            elif self.hunger < 95:
+                self.hunger += 5
+                print(f"fed {self.name}")
+        elif self.age > 5:
+            if self.hunger >= 90:
+                print(f"{self.name} is full!!")
+            elif self.hunger < 90:
+                self.hunger += 10
+                print(f"fed {self.name}")
+                self.hygiene -= 2
+
+    def play(self):
+        if happy >= 90:
+            return f"{self.name} is happy!"
+        elif happy <= 89:
+            happy += 10
+            print(f"{self.name} played with others!")
+            self.hygiene -= 5
+            self.hunger -= 5
+            self.thrist -= 4
+
+    def drink(self):
+        if self.thrist >= 90:
+            print(f" {self.name} is hydrated!")
+        elif self.thrist < 90:
+            self.thrist += 4
+            print(f"gave {self.name} some water")
+            self.happiness -= 2
+    def wash(self):
+        if self.hygiene >= 80:
+            print(f"{self.name} is clean!!")
+        elif self.hygiene < 80:
+            self.hygiene += 10
+            print(f"{self.name} jumped in the pool")
+            self.hunger -= 3
+
+
+
+
+age = int(input("How old is your pet: "))
+name =input("WHat is your pets name?: ")
+
+while True:
+    userpet = pet(age, name)
+    print(f"hunger:{userpet.hunger}, thirst:{userpet.thrist}, hygiene:{userpet.hygiene}, happiness:{userpet.happiness}")
+    useraction = input("1 = feed, 2 = give water, 3 = wash, 4 = play")
+    if useraction == "1":
+        userpet.feed()
+    elif useraction == "2":
+        userpet.thrist()
+    elif useraction == "3":
+        userpet.hygiene()
+    elif useraction == "4":
+        userpet.happiness()
+    else:
+        print("Idiot")
+
