@@ -127,6 +127,7 @@ class student:
             
         else:
             return "Unc"
+import random
 
 class pet:
     def __init__(self, age, name,):
@@ -138,63 +139,102 @@ class pet:
         self.hygiene = 30
         
     def feed(self):
-        if self.age >= 5:
             if self.hunger >= 95:
                 print(f"{self.name} is full!!")
-            elif self.hunger < 95:
-                self.hunger += 5
-                print(f"fed {self.name}")
-        elif self.age > 5:
-            if self.hunger >= 90:
-                print(f"{self.name} is full!!")
-            elif self.hunger < 90:
-                self.hunger += 10
-                print(f"fed {self.name}")
-                self.hygiene -= 2
-
+            elif self.hunger > 95:
+                self.hunger +=5
+                self.hygiene -= random.randint(1,5) 
+                print(f"{self.name} ate some snacks")
     def play(self):
-        if happy >= 90:
+        if self.happiness >= 90:
             return f"{self.name} is happy!"
-        elif happy <= 89:
-            happy += 10
+        elif self.happiness <= 89:
+            self.happiness += 10
             print(f"{self.name} played with others!")
-            self.hygiene -= 5
-            self.hunger -= 5
-            self.thrist -= 4
+            self.hygiene -=  random.randint(1,5) 
+            self.hunger -=  random.randint(1,5) 
+            self.thrist -=  random.randint(1,5) 
 
     def drink(self):
         if self.thrist >= 90:
             print(f" {self.name} is hydrated!")
         elif self.thrist < 90:
             self.thrist += 4
-            print(f"gave {self.name} some water")
-            self.happiness -= 2
+            print(f"gave {self.thrist} some water")
+            self.happiness -=  random.randint(1,5) 
+
+
     def wash(self):
         if self.hygiene >= 80:
             print(f"{self.name} is clean!!")
         elif self.hygiene < 80:
             self.hygiene += 10
             print(f"{self.name} jumped in the pool")
-            self.hunger -= 3
+            self.hunger -=  random.randint(1,5) 
 
 
 
 
 age = int(input("How old is your pet: "))
 name =input("WHat is your pets name?: ")
-
+userpet = pet(age, name)
 while True:
-    userpet = pet(age, name)
+  
     print(f"hunger:{userpet.hunger}, thirst:{userpet.thrist}, hygiene:{userpet.hygiene}, happiness:{userpet.happiness}")
     useraction = input("1 = feed, 2 = give water, 3 = wash, 4 = play")
     if useraction == "1":
         userpet.feed()
     elif useraction == "2":
-        userpet.thrist()
+        userpet.drink()
     elif useraction == "3":
-        userpet.hygiene()
+        userpet.wash()
     elif useraction == "4":
-        userpet.happiness()
+        userpet.play()
     else:
-        print("Idiot")
+        print("Idiot") 
+
+
+
+# def broke(quarters,m1,m2,m3):
+#     Martha = quarters 
+#     nmplays = 0
+#     M1 = 35-m1
+#     M2 = 100-m2
+#     M3 = 10-m3
+#     while True:
+#         if Martha > 0:
+#             Martha -=1
+#             M1 -=1
+#             nmplays+=1
+#             if M1 ==0:
+#                 Martha += 30
+#                 M1=35
+#             if Martha > 0:
+#                 Martha -=1
+#                 M2 -=1
+#                 nmplays+=1
+#             else:
+#                 print(f"{nmplays}")
+#                 break
+#             if M2 == 0:
+#                 Martha += 60
+#                 M2 =100
+                            
+#             if Martha > 0:
+#                 Martha -=1
+#                 M3 -=1
+#                 nmplays+=1
+#                 if M3 == 0:
+#                     Martha += 9
+#                     M3 =10
+#             else:
+#                 print(f"{nmplays}")
+#                 break
+#         else:
+#             print(f"{nmplays}")
+#             break
+
+
+        
+          
 
