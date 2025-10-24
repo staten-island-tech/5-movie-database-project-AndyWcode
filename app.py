@@ -213,7 +213,7 @@ while True:
         print(f"yo {userpet.name} is BORED")
         time.sleep(2)
     print(f"hunger:{userpet.hunger}, thirst:{userpet.thrist}, hygiene:{userpet.hygiene}, happiness:{userpet.happiness}")
-    useraction = input("1 = feed, 2 = give water, 3 = wash, 4 = play")
+    useraction = input("1 = feed, 2 = give water, 3 = wash, 4 = play:")
     if useraction == "1":
         userpet.feed()
     elif useraction == "2":
